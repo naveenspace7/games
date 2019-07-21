@@ -11,8 +11,12 @@
 namespace game {
     
     class Ball: public Item, public sf::CircleShape {
+        private:
+        TwoDim m_motionVector;
         public:
         Ball(float x, float y, float radius);
+        void update();
+        bool isCollision();
     };
 
     class Brick: public Item, public sf::RectangleShape {
@@ -23,7 +27,12 @@ namespace game {
     };
 
     class Base: public Item, public sf::RectangleShape {
+        private:
+        const int MOVEMENT = 10;
         public:
+        void update();
+        void right();
+        void left();
         Base(float x, float y, float width, float height);
     };
 }
