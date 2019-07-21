@@ -20,15 +20,15 @@ namespace game {
     class Game {
 
         private:
+        public:
         std::string m_title;
         TwoDim m_dimension;
-        std::vector<Base*> m_bases;
-        Base *m_base;
         Ball *m_ball;
         std::vector<Brick*> m_bricks;
         // std::vector<Brick*> m_drawables;
         
-        public:
+        Base *m_base;
+        std::vector<Base*> m_bases;
         static bool isInFrame(sf::Vector2f point);
         sf::RenderWindow m_windowHandle;
         Game(int width, int height, std::string title);

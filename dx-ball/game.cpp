@@ -32,7 +32,8 @@ void Game::addBase() {
 
 void Game::addBall() {
     const int RADIUS = 10;
-    m_ball = new Ball(getWidth()/2 - RADIUS, getHeight()/2 - RADIUS, RADIUS);
+    m_ball = new Ball(0, 0, RADIUS);
+    // m_ball = new Ball(getWidth()/2 - RADIUS, getHeight()/2 - RADIUS, RADIUS);
 }
 
 void Game::draw() {
@@ -59,7 +60,7 @@ void Game::addBrick() {
 }
 
 void Game::update() {
-    m_ball->update();
+    m_ball->update(this);
     m_bases[0]->update();
     m_bases[1]->update();
 }

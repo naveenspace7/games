@@ -8,8 +8,9 @@ namespace game
 
     class Item {
 
-        protected:
-        TwoDim m_dimension, m_position;
+        // friend class Item;
+        public:
+        TwoDim m_dimension, m_position; // make this protected/private again
         // TODO: add color
 
         public:
