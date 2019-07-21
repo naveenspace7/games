@@ -8,7 +8,7 @@ namespace game
 
     class Item {
 
-        private:
+        protected:
         TwoDim m_dimension, m_position;
         // TODO: add color
 
